@@ -16,5 +16,15 @@ namespace FolderCreator_v2.Forms
 		{
 			InitializeComponent();
 		}
+
+		private void tslSiteGunnar_Click(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start("http://www.gunnarcorrea.com");
+		}
+
+		private void tslSiteSatellaSoft_Click(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start("https://www.satellasoft.com");
+		}
 	}
 }

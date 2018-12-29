@@ -1,11 +1,12 @@
 C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\bin\Debug\FolderCreator_v2.exe.config
 C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\bin\Debug\FolderCreator_v2.exe
 C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\bin\Debug\FolderCreator_v2.pdb
-C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Debug\FolderCreator_v2.csprojResolveAssemblyReference.cache
+C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Debug\FolderCreator_v2.Forms.frmAbout.resources
+C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Debug\FolderCreator_v2.Forms.frmAnotherFiles.resources
+C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Debug\FolderCreator_v2.Forms.frmExtensionFiles.resources
 C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Debug\FolderCreator_v2.frmMain.resources
 C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Debug\FolderCreator_v2.Properties.Resources.resources
 C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Debug\FolderCreator_v2.csproj.GenerateResource.cache
 C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Debug\FolderCreator_v2.csproj.CoreCompileInputs.cache
 C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Debug\FolderCreator_v2.exe
 C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Debug\FolderCreator_v2.pdb
-C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Debug\FolderCreator_v2.Forms.frmExtensionFiles.resources

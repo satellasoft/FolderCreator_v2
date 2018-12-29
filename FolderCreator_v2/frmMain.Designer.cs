@@ -30,25 +30,26 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
 			this.panelTop = new System.Windows.Forms.Panel();
+			this.topMenu = new System.Windows.Forms.MenuStrip();
+			this.topMenuFile = new System.Windows.Forms.ToolStripMenuItem();
+			this.topMenuExtensionFiles = new System.Windows.Forms.ToolStripMenuItem();
+			this.topMenuAnotherFiles = new System.Windows.Forms.ToolStripMenuItem();
+			this.topMenuAbout = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.topMenuExit = new System.Windows.Forms.ToolStripMenuItem();
+			this.btnList = new System.Windows.Forms.Button();
 			this.txtFolderPath = new System.Windows.Forms.TextBox();
+			this.btnFindFolder = new System.Windows.Forms.Button();
 			this.panelBottom = new System.Windows.Forms.Panel();
 			this.ckMoveFiles = new System.Windows.Forms.CheckBox();
 			this.btnUncheckAll = new System.Windows.Forms.Button();
 			this.btnCheckAll = new System.Windows.Forms.Button();
 			this.panelCenter = new System.Windows.Forms.Panel();
 			this.clbFiles = new System.Windows.Forms.CheckedListBox();
-			this.topMenu = new System.Windows.Forms.MenuStrip();
-			this.topMenuFile = new System.Windows.Forms.ToolStripMenuItem();
-			this.topMenuExtensionFiles = new System.Windows.Forms.ToolStripMenuItem();
-			this.topMenuAbout = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-			this.topMenuExit = new System.Windows.Forms.ToolStripMenuItem();
-			this.btnList = new System.Windows.Forms.Button();
-			this.btnFindFolder = new System.Windows.Forms.Button();
 			this.panelTop.SuspendLayout();
+			this.topMenu.SuspendLayout();
 			this.panelBottom.SuspendLayout();
 			this.panelCenter.SuspendLayout();
-			this.topMenu.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panelTop
@@ -64,6 +65,82 @@
 			this.panelTop.Size = new System.Drawing.Size(882, 92);
 			this.panelTop.TabIndex = 0;
 			// 
+			// topMenu
+			// 
+			this.topMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+			this.topMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.topMenuFile});
+			this.topMenu.Location = new System.Drawing.Point(0, 0);
+			this.topMenu.Name = "topMenu";
+			this.topMenu.Size = new System.Drawing.Size(882, 28);
+			this.topMenu.TabIndex = 6;
+			this.topMenu.Text = "menuStrip1";
+			// 
+			// topMenuFile
+			// 
+			this.topMenuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.topMenuExtensionFiles,
+            this.topMenuAnotherFiles,
+            this.topMenuAbout,
+            this.toolStripSeparator1,
+            this.topMenuExit});
+			this.topMenuFile.Name = "topMenuFile";
+			this.topMenuFile.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+			this.topMenuFile.Size = new System.Drawing.Size(44, 24);
+			this.topMenuFile.Text = "File";
+			// 
+			// topMenuExtensionFiles
+			// 
+			this.topMenuExtensionFiles.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.topMenuExtensionFiles.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.topMenuExtensionFiles.Name = "topMenuExtensionFiles";
+			this.topMenuExtensionFiles.Size = new System.Drawing.Size(216, 26);
+			this.topMenuExtensionFiles.Text = "Extension Files";
+			this.topMenuExtensionFiles.Click += new System.EventHandler(this.topMenuExtensionFiles_Click);
+			// 
+			// topMenuAnotherFiles
+			// 
+			this.topMenuAnotherFiles.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.topMenuAnotherFiles.Name = "topMenuAnotherFiles";
+			this.topMenuAnotherFiles.Size = new System.Drawing.Size(216, 26);
+			this.topMenuAnotherFiles.Text = "Another Files";
+			this.topMenuAnotherFiles.Click += new System.EventHandler(this.topMenuAnotherFiles_Click);
+			// 
+			// topMenuAbout
+			// 
+			this.topMenuAbout.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.topMenuAbout.Name = "topMenuAbout";
+			this.topMenuAbout.Size = new System.Drawing.Size(216, 26);
+			this.topMenuAbout.Text = "About";
+			this.topMenuAbout.Click += new System.EventHandler(this.topMenuAbout_Click);
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(213, 6);
+			// 
+			// topMenuExit
+			// 
+			this.topMenuExit.ForeColor = System.Drawing.Color.Red;
+			this.topMenuExit.Name = "topMenuExit";
+			this.topMenuExit.Size = new System.Drawing.Size(216, 26);
+			this.topMenuExit.Text = "Exit";
+			this.topMenuExit.Click += new System.EventHandler(this.topMenuExit_Click);
+			// 
+			// btnList
+			// 
+			this.btnList.BackgroundImage = global::FolderCreator_v2.Properties.Resources.iconfinder_go_bottom_118767;
+			this.btnList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnList.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnList.ForeColor = System.Drawing.Color.White;
+			this.btnList.Location = new System.Drawing.Point(820, 31);
+			this.btnList.Name = "btnList";
+			this.btnList.Size = new System.Drawing.Size(50, 50);
+			this.btnList.TabIndex = 2;
+			this.btnList.UseVisualStyleBackColor = true;
+			this.btnList.Click += new System.EventHandler(this.btnList_Click);
+			// 
 			// txtFolderPath
 			// 
 			this.txtFolderPath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,6 +150,20 @@
 			this.txtFolderPath.Size = new System.Drawing.Size(734, 34);
 			this.txtFolderPath.TabIndex = 1;
 			this.txtFolderPath.Text = "C:\\Users\\gunna\\Documents\\oCam";
+			// 
+			// btnFindFolder
+			// 
+			this.btnFindFolder.BackgroundImage = global::FolderCreator_v2.Properties.Resources.iconfinder_folder_saved_search_118905;
+			this.btnFindFolder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnFindFolder.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnFindFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnFindFolder.ForeColor = System.Drawing.Color.White;
+			this.btnFindFolder.Location = new System.Drawing.Point(763, 31);
+			this.btnFindFolder.Name = "btnFindFolder";
+			this.btnFindFolder.Size = new System.Drawing.Size(50, 50);
+			this.btnFindFolder.TabIndex = 0;
+			this.btnFindFolder.UseVisualStyleBackColor = true;
+			this.btnFindFolder.Click += new System.EventHandler(this.btnFindFolder_Click);
 			// 
 			// panelBottom
 			// 
@@ -143,85 +234,6 @@
 			this.clbFiles.Size = new System.Drawing.Size(882, 424);
 			this.clbFiles.TabIndex = 2;
 			// 
-			// topMenu
-			// 
-			this.topMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
-			this.topMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.topMenuFile});
-			this.topMenu.Location = new System.Drawing.Point(0, 0);
-			this.topMenu.Name = "topMenu";
-			this.topMenu.Size = new System.Drawing.Size(882, 28);
-			this.topMenu.TabIndex = 6;
-			this.topMenu.Text = "menuStrip1";
-			// 
-			// topMenuFile
-			// 
-			this.topMenuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.topMenuExtensionFiles,
-            this.topMenuAbout,
-            this.toolStripSeparator1,
-            this.topMenuExit});
-			this.topMenuFile.Name = "topMenuFile";
-			this.topMenuFile.Size = new System.Drawing.Size(44, 24);
-			this.topMenuFile.Text = "File";
-			// 
-			// topMenuExtensionFiles
-			// 
-			this.topMenuExtensionFiles.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.topMenuExtensionFiles.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.topMenuExtensionFiles.Name = "topMenuExtensionFiles";
-			this.topMenuExtensionFiles.Size = new System.Drawing.Size(216, 26);
-			this.topMenuExtensionFiles.Text = "Extension Files";
-			this.topMenuExtensionFiles.Click += new System.EventHandler(this.topMenuExtensionFiles_Click);
-			// 
-			// topMenuAbout
-			// 
-			this.topMenuAbout.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.topMenuAbout.Name = "topMenuAbout";
-			this.topMenuAbout.Size = new System.Drawing.Size(216, 26);
-			this.topMenuAbout.Text = "About";
-			// 
-			// toolStripSeparator1
-			// 
-			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(213, 6);
-			// 
-			// topMenuExit
-			// 
-			this.topMenuExit.ForeColor = System.Drawing.Color.Red;
-			this.topMenuExit.Name = "topMenuExit";
-			this.topMenuExit.Size = new System.Drawing.Size(216, 26);
-			this.topMenuExit.Text = "Exit";
-			this.topMenuExit.Click += new System.EventHandler(this.topMenuExit_Click);
-			// 
-			// btnList
-			// 
-			this.btnList.BackgroundImage = global::FolderCreator_v2.Properties.Resources.iconfinder_go_bottom_118767;
-			this.btnList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.btnList.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnList.ForeColor = System.Drawing.Color.White;
-			this.btnList.Location = new System.Drawing.Point(820, 31);
-			this.btnList.Name = "btnList";
-			this.btnList.Size = new System.Drawing.Size(50, 50);
-			this.btnList.TabIndex = 2;
-			this.btnList.UseVisualStyleBackColor = true;
-			this.btnList.Click += new System.EventHandler(this.btnList_Click);
-			// 
-			// btnFindFolder
-			// 
-			this.btnFindFolder.BackgroundImage = global::FolderCreator_v2.Properties.Resources.iconfinder_folder_saved_search_118905;
-			this.btnFindFolder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.btnFindFolder.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnFindFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnFindFolder.ForeColor = System.Drawing.Color.White;
-			this.btnFindFolder.Location = new System.Drawing.Point(763, 31);
-			this.btnFindFolder.Name = "btnFindFolder";
-			this.btnFindFolder.Size = new System.Drawing.Size(50, 50);
-			this.btnFindFolder.TabIndex = 0;
-			this.btnFindFolder.UseVisualStyleBackColor = true;
-			this.btnFindFolder.Click += new System.EventHandler(this.btnFindFolder_Click);
-			// 
 			// frmMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -240,11 +252,11 @@
 			this.Text = "Folder Creator V2";
 			this.panelTop.ResumeLayout(false);
 			this.panelTop.PerformLayout();
+			this.topMenu.ResumeLayout(false);
+			this.topMenu.PerformLayout();
 			this.panelBottom.ResumeLayout(false);
 			this.panelBottom.PerformLayout();
 			this.panelCenter.ResumeLayout(false);
-			this.topMenu.ResumeLayout(false);
-			this.topMenu.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -267,6 +279,7 @@
 		private System.Windows.Forms.ToolStripMenuItem topMenuAbout;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripMenuItem topMenuExit;
+		private System.Windows.Forms.ToolStripMenuItem topMenuAnotherFiles;
 	}
 }
 

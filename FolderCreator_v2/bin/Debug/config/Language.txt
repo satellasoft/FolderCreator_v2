@@ -1,1 +1,0 @@
-Check All|Uncheck All|Move files to folder|Invalid Folder|File|Extension files|About|Exit|The extent already in the list|Extension File|Invalid extension|No files found based on extensions|

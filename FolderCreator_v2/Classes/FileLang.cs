@@ -6,30 +6,29 @@ using System.Threading.Tasks;
 
 namespace FolderCreator_v2.Classes
 {
-	public class Lang
+	public class FileLang
 	{
 		private string fileName;
 		private string[] texts;
 
-		public Lang()
+		public FileLang()
 		{
 			this.FileName = "Language.txt";
 			Texts = new string[] {
 				"Check All",
 				"Uncheck All",
 				"Move files to folder",
-				"Invalid Folder",//Using in Alert
-				//Menu Strip
+				"Invalid Folder",
 				"File",
 				"Extension files",
 				"About",
 				"Exit",
-				 //Using on frmExtension
-				"The extent already in the list",//8
-				"Extension File",//9
-				"Invalid extension", //10
-				//
-				"No files found based on extensions",//11
+				"The extent already in the list",
+				"Extension File",
+				"Invalid extension",
+				"No files found based on extensions",
+				"Another Files",
+				"The selected file is already in the list",//13
 			};
 		}
 

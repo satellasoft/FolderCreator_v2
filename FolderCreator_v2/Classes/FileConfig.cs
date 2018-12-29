@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace FolderCreator_v2.Classes
 {
-	public class Config
+	public class FileConfig
 	{
 		#region "Variables"
 		private string configPath;
-		private Lang lang = new Lang();
+		private FileLang lang = new FileLang();
 		private FileExtension fileExtension = new FileExtension();
+		private FileAnotherFiles fileAnotherFiles = new FileAnotherFiles();
 		private FilesMethods fileMethods = new FilesMethods();
 		#endregion
 
-		public Config()
+		public FileConfig()
 		{
 			this.configPath = "config/";
 			this.CreateDefautConfigs();
@@ -78,7 +79,6 @@ namespace FolderCreator_v2.Classes
 			{
 				return null;
 			}
-
 		}
 
 		public void SaveExtensions(string[] extensions)
@@ -108,6 +108,27 @@ namespace FolderCreator_v2.Classes
 				}
 
 				return files;
+			}
+			else
+			{
+				return null;
+			}
+		}
+
+		public void SaveAnotherFiles(string[] files)
+		{
+			string path = string.Format("{0}/{1}", this.configPath, this.fileAnotherFiles.FileName);
+			this.fileMethods.CreateExtensionFileData(path, files);
+		}
+
+		public string[] GetAnotherFiles()
+		{
+			string path = string.Format("{0}/{1}", this.configPath, this.fileAnotherFiles.FileName);
+			string data = this.fileMethods.GetFileData(path);
+
+			if (data != null)
+			{
+				return data.Split('|');
 			}
 			else
 			{

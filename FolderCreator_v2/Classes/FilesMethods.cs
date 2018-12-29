@@ -43,16 +43,19 @@ namespace FolderCreator_v2.Classes
 		public string GetFileData(string path)
 		{
 			string data = "";
-
-			using (StreamReader sr = new StreamReader(path))
+			if (FileExists(path))
 			{
-				data = sr.ReadLine();
+				using (StreamReader sr = new StreamReader(path))
+				{
+					data = sr.ReadLine();
+				}
 			}
 
 			return data;
 		}
 
-		public string[] GetAllFilesInnerDirectory(string path) {
+		public string[] GetAllFilesInnerDirectory(string path)
+		{
 			return Directory.GetFiles(path);
 		}
 	}

@@ -14,7 +14,7 @@ namespace FolderCreator_v2.Forms
 	public partial class frmExtensionFiles : Form
 	{
 		private FilesMethods fileMethods;
-		private Config config;
+		private FileConfig config;
 		private string[] texts;
 		private string[] extensions;
 
@@ -23,7 +23,7 @@ namespace FolderCreator_v2.Forms
 			InitializeComponent();
 
 			this.fileMethods = new FilesMethods();
-			this.config = new Config();
+			this.config = new FileConfig();
 			texts = this.config.GetLanguages();
 			this.extensions = this.config.GetExtensions();
 			this.Text = texts[9];
@@ -33,7 +33,7 @@ namespace FolderCreator_v2.Forms
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
-			if (txtExtension.Text.Trim().Length > 0)
+			if (txtExtension.Text.Trim().Length > 0 && txtExtension.Text != ".")
 			{
 				if (!CheckExtensionExistsInList(txtExtension.Text))
 				{

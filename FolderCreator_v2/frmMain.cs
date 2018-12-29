@@ -14,15 +14,17 @@ namespace FolderCreator_v2
 {
 	public partial class frmMain : Form
 	{
+		#region "Variables"
 		private FilesMethods fileMethods;
-		private Config config;
+		private FileConfig config;
 		private string[] texts;
+		#endregion
 
 		public frmMain()
 		{
 			InitializeComponent();
 			this.fileMethods = new FilesMethods();
-			this.config = new Config();
+			this.config = new FileConfig();
 			texts = this.config.GetLanguages();
 			TranslateElements();
 		}
@@ -38,6 +40,7 @@ namespace FolderCreator_v2
 			topMenuExtensionFiles.Text = texts[5];
 			topMenuAbout.Text = texts[6];
 			topMenuExit.Text = texts[7];
+			topMenuAnotherFiles.Text = texts[12];
 		}
 
 		private void btnFindFolder_Click(object sender, EventArgs e)
@@ -115,6 +118,16 @@ namespace FolderCreator_v2
 				{
 					clbFiles.SetItemChecked(i, false);
 				}
+		}
+
+		private void topMenuAbout_Click(object sender, EventArgs e)
+		{
+			new frmAbout().ShowDialog();
+		}
+
+		private void topMenuAnotherFiles_Click(object sender, EventArgs e)
+		{
+			new frmAnotherFiles().ShowDialog();
 		}
 	}
 }

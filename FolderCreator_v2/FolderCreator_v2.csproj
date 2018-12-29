@@ -47,15 +47,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Config.cs" />
+    <Compile Include="Classes\FileAnotherFiles.cs" />
+    <Compile Include="Classes\FileConfig.cs" />
     <Compile Include="Classes\FileExtension.cs" />
     <Compile Include="Classes\FilesMethods.cs" />
-    <Compile Include="Classes\Lang.cs" />
+    <Compile Include="Classes\FileLang.cs" />
     <Compile Include="Forms\frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAnotherFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAnotherFiles.Designer.cs">
+      <DependentUpon>frmAnotherFiles.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmExtensionFiles.cs">
       <SubType>Form</SubType>
@@ -71,6 +78,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAnotherFiles.resx">
+      <DependentUpon>frmAnotherFiles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmExtensionFiles.resx">
       <DependentUpon>frmExtensionFiles.cs</DependentUpon>
     </EmbeddedResource>
