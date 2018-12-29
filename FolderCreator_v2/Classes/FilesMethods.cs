@@ -31,7 +31,7 @@ namespace FolderCreator_v2.Classes
 
 		public void CreateExtensionFileData(string path, string[] data)
 		{
-			using (StreamWriter sw = new StreamWriter(path, true))
+			using (StreamWriter sw = new StreamWriter(path))
 			{
 				foreach (string s in data)
 				{
@@ -50,6 +50,10 @@ namespace FolderCreator_v2.Classes
 			}
 
 			return data;
+		}
+
+		public string[] GetAllFilesInnerDirectory(string path) {
+			return Directory.GetFiles(path);
 		}
 	}
 }

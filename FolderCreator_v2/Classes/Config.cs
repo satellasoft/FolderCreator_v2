@@ -58,10 +58,61 @@ namespace FolderCreator_v2.Classes
 		}
 		#endregion
 
-		public string[] GetLanguages() {
+		public string[] GetLanguages()
+		{
 			string path = string.Format("{0}/{1}", this.configPath, this.lang.FileName);
 
 			return this.fileMethods.GetFileData(path).Split('|');
+		}
+
+		public string[] GetExtensions()
+		{
+			string path = string.Format("{0}/{1}", this.configPath, this.fileExtension.FileName);
+			string data = this.fileMethods.GetFileData(path);
+
+			if (data != null)
+			{
+				return data.Split('|');
+			}
+			else
+			{
+				return null;
+			}
+
+		}
+
+		public void SaveExtensions(string[] extensions)
+		{
+			string path = string.Format("{0}/{1}", this.configPath, this.fileExtension.FileName);
+			this.fileMethods.CreateExtensionFileData(path, extensions);
+		}
+
+		public List<string> GetAllFilesExtensions(string path)
+		{
+			string[] extensions = this.GetExtensions();
+
+			if (extensions != null && extensions.Length > 0)
+			{
+				List<string> files = new List<string>();
+
+				foreach (string file in this.fileMethods.GetAllFilesInnerDirectory(path))
+				{
+					string ex = System.IO.Path.GetExtension(file);
+
+					for (int i = 0; i < extensions.Length; i++)
+					{
+						if (ex == extensions[i])
+							files.Add(file);
+					}
+
+				}
+
+				return files;
+			}
+			else
+			{
+				return null;
+			}
 		}
 	}
 }

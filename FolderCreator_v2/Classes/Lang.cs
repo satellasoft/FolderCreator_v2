@@ -18,7 +18,18 @@ namespace FolderCreator_v2.Classes
 				"Check All",
 				"Uncheck All",
 				"Move files to folder",
-				"Invalid Folder"
+				"Invalid Folder",//Using in Alert
+				//Menu Strip
+				"File",
+				"Extension files",
+				"About",
+				"Exit",
+				 //Using on frmExtension
+				"The extent already in the list",//8
+				"Extension File",//9
+				"Invalid extension", //10
+				//
+				"No files found based on extensions",//11
 			};
 		}
 
