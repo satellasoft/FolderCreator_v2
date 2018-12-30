@@ -1,1 +1,0 @@
-Check All|Uncheck All|Move files to folder|Invalid Folder|File|Extension files|About|Exit|The extent already in the list|Extension File|Invalid extension|No files found based on extensions|Another Files|The selected file is already in the list|Do you want to quit?|No files are selected in the list|All files have been moved|

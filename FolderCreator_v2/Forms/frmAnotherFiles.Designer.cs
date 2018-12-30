@@ -29,11 +29,11 @@
 		private void InitializeComponent()
 		{
 			this.panelTop = new System.Windows.Forms.Panel();
+			this.btnSave = new System.Windows.Forms.Button();
+			this.btnAdd = new System.Windows.Forms.Button();
 			this.lbAboutTitle = new System.Windows.Forms.Label();
 			this.btnList = new System.Windows.Forms.Button();
 			this.listAnotherFiles = new System.Windows.Forms.ListBox();
-			this.btnSave = new System.Windows.Forms.Button();
-			this.btnAdd = new System.Windows.Forms.Button();
 			this.panelTop.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -50,6 +50,34 @@
 			this.panelTop.Name = "panelTop";
 			this.panelTop.Size = new System.Drawing.Size(593, 89);
 			this.panelTop.TabIndex = 2;
+			// 
+			// btnSave
+			// 
+			this.btnSave.BackgroundImage = global::FolderCreator_v2.Properties.Resources.iconfinder_Save_1493294;
+			this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSave.ForeColor = System.Drawing.Color.White;
+			this.btnSave.Location = new System.Drawing.Point(508, 17);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(50, 50);
+			this.btnSave.TabIndex = 6;
+			this.btnSave.UseVisualStyleBackColor = true;
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+			// 
+			// btnAdd
+			// 
+			this.btnAdd.BackgroundImage = global::FolderCreator_v2.Properties.Resources.iconfinder_list_add_118777;
+			this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAdd.ForeColor = System.Drawing.Color.White;
+			this.btnAdd.Location = new System.Drawing.Point(445, 17);
+			this.btnAdd.Name = "btnAdd";
+			this.btnAdd.Size = new System.Drawing.Size(50, 50);
+			this.btnAdd.TabIndex = 5;
+			this.btnAdd.UseVisualStyleBackColor = true;
+			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 			// 
 			// lbAboutTitle
 			// 
@@ -87,34 +115,6 @@
 			this.listAnotherFiles.Size = new System.Drawing.Size(593, 480);
 			this.listAnotherFiles.TabIndex = 3;
 			this.listAnotherFiles.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lbAnotherFiles_KeyDown);
-			// 
-			// btnSave
-			// 
-			this.btnSave.BackgroundImage = global::FolderCreator_v2.Properties.Resources.iconfinder_Save_1493294;
-			this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSave.ForeColor = System.Drawing.Color.White;
-			this.btnSave.Location = new System.Drawing.Point(508, 17);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(50, 50);
-			this.btnSave.TabIndex = 6;
-			this.btnSave.UseVisualStyleBackColor = true;
-			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-			// 
-			// btnAdd
-			// 
-			this.btnAdd.BackgroundImage = global::FolderCreator_v2.Properties.Resources.iconfinder_list_add_118777;
-			this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnAdd.ForeColor = System.Drawing.Color.White;
-			this.btnAdd.Location = new System.Drawing.Point(445, 17);
-			this.btnAdd.Name = "btnAdd";
-			this.btnAdd.Size = new System.Drawing.Size(50, 50);
-			this.btnAdd.TabIndex = 5;
-			this.btnAdd.UseVisualStyleBackColor = true;
-			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 			// 
 			// frmAnotherFiles
 			// 

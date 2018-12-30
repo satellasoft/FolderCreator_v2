@@ -125,6 +125,7 @@
 			this.ShowIcon = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Extension Files";
+			this.Load += new System.EventHandler(this.frmExtensionFiles_Load);
 			this.panelTop.ResumeLayout(false);
 			this.panelTop.PerformLayout();
 			this.panelCenter.ResumeLayout(false);

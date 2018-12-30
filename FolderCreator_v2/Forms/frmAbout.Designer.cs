@@ -30,8 +30,8 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
 			this.panelTop = new System.Windows.Forms.Panel();
-			this.btnList = new System.Windows.Forms.Button();
 			this.lbAboutTitle = new System.Windows.Forms.Label();
+			this.btnList = new System.Windows.Forms.Button();
 			this.txtDesc = new System.Windows.Forms.RichTextBox();
 			this.spBottom = new System.Windows.Forms.ToolStrip();
 			this.tslSiteGunnar = new System.Windows.Forms.ToolStripLabel();
@@ -53,6 +53,17 @@
 			this.panelTop.Size = new System.Drawing.Size(499, 75);
 			this.panelTop.TabIndex = 1;
 			// 
+			// lbAboutTitle
+			// 
+			this.lbAboutTitle.AutoSize = true;
+			this.lbAboutTitle.Font = new System.Drawing.Font("Segoe UI Semilight", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbAboutTitle.ForeColor = System.Drawing.Color.White;
+			this.lbAboutTitle.Location = new System.Drawing.Point(12, 9);
+			this.lbAboutTitle.Name = "lbAboutTitle";
+			this.lbAboutTitle.Size = new System.Drawing.Size(129, 54);
+			this.lbAboutTitle.TabIndex = 3;
+			this.lbAboutTitle.Text = "About";
+			// 
 			// btnList
 			// 
 			this.btnList.BackgroundImage = global::FolderCreator_v2.Properties.Resources.iconfinder_go_bottom_118767;
@@ -66,17 +77,6 @@
 			this.btnList.Size = new System.Drawing.Size(56, 72);
 			this.btnList.TabIndex = 2;
 			this.btnList.UseVisualStyleBackColor = true;
-			// 
-			// lbAboutTitle
-			// 
-			this.lbAboutTitle.AutoSize = true;
-			this.lbAboutTitle.Font = new System.Drawing.Font("Segoe UI Semilight", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbAboutTitle.ForeColor = System.Drawing.Color.White;
-			this.lbAboutTitle.Location = new System.Drawing.Point(12, 9);
-			this.lbAboutTitle.Name = "lbAboutTitle";
-			this.lbAboutTitle.Size = new System.Drawing.Size(129, 54);
-			this.lbAboutTitle.TabIndex = 3;
-			this.lbAboutTitle.Text = "About";
 			// 
 			// txtDesc
 			// 

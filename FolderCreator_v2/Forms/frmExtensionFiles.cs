@@ -94,5 +94,10 @@ namespace FolderCreator_v2.Forms
 		private void listExtension_MouseHover(object sender, EventArgs e)
 		{
 		}
+
+		private void frmExtensionFiles_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
