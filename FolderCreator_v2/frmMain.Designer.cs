@@ -41,6 +41,8 @@
 			this.txtFolderPath = new System.Windows.Forms.TextBox();
 			this.btnFindFolder = new System.Windows.Forms.Button();
 			this.panelBottom = new System.Windows.Forms.Panel();
+			this.pbEffect = new System.Windows.Forms.ProgressBar();
+			this.btnCreateFolders = new System.Windows.Forms.Button();
 			this.ckMoveFiles = new System.Windows.Forms.CheckBox();
 			this.btnUncheckAll = new System.Windows.Forms.Button();
 			this.btnCheckAll = new System.Windows.Forms.Button();
@@ -94,7 +96,7 @@
 			this.topMenuExtensionFiles.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.topMenuExtensionFiles.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.topMenuExtensionFiles.Name = "topMenuExtensionFiles";
-			this.topMenuExtensionFiles.Size = new System.Drawing.Size(216, 26);
+			this.topMenuExtensionFiles.Size = new System.Drawing.Size(180, 26);
 			this.topMenuExtensionFiles.Text = "Extension Files";
 			this.topMenuExtensionFiles.Click += new System.EventHandler(this.topMenuExtensionFiles_Click);
 			// 
@@ -102,7 +104,7 @@
 			// 
 			this.topMenuAnotherFiles.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.topMenuAnotherFiles.Name = "topMenuAnotherFiles";
-			this.topMenuAnotherFiles.Size = new System.Drawing.Size(216, 26);
+			this.topMenuAnotherFiles.Size = new System.Drawing.Size(180, 26);
 			this.topMenuAnotherFiles.Text = "Another Files";
 			this.topMenuAnotherFiles.Click += new System.EventHandler(this.topMenuAnotherFiles_Click);
 			// 
@@ -110,20 +112,20 @@
 			// 
 			this.topMenuAbout.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.topMenuAbout.Name = "topMenuAbout";
-			this.topMenuAbout.Size = new System.Drawing.Size(216, 26);
+			this.topMenuAbout.Size = new System.Drawing.Size(180, 26);
 			this.topMenuAbout.Text = "About";
 			this.topMenuAbout.Click += new System.EventHandler(this.topMenuAbout_Click);
 			// 
 			// toolStripSeparator1
 			// 
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(213, 6);
+			this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
 			// 
 			// topMenuExit
 			// 
 			this.topMenuExit.ForeColor = System.Drawing.Color.Red;
 			this.topMenuExit.Name = "topMenuExit";
-			this.topMenuExit.Size = new System.Drawing.Size(216, 26);
+			this.topMenuExit.Size = new System.Drawing.Size(180, 26);
 			this.topMenuExit.Text = "Exit";
 			this.topMenuExit.Click += new System.EventHandler(this.topMenuExit_Click);
 			// 
@@ -149,7 +151,6 @@
 			this.txtFolderPath.Name = "txtFolderPath";
 			this.txtFolderPath.Size = new System.Drawing.Size(734, 34);
 			this.txtFolderPath.TabIndex = 1;
-			this.txtFolderPath.Text = "C:\\Users\\gunna\\Documents\\oCam";
 			// 
 			// btnFindFolder
 			// 
@@ -168,6 +169,8 @@
 			// panelBottom
 			// 
 			this.panelBottom.BackColor = System.Drawing.Color.Crimson;
+			this.panelBottom.Controls.Add(this.pbEffect);
+			this.panelBottom.Controls.Add(this.btnCreateFolders);
 			this.panelBottom.Controls.Add(this.ckMoveFiles);
 			this.panelBottom.Controls.Add(this.btnUncheckAll);
 			this.panelBottom.Controls.Add(this.btnCheckAll);
@@ -176,6 +179,33 @@
 			this.panelBottom.Name = "panelBottom";
 			this.panelBottom.Size = new System.Drawing.Size(882, 75);
 			this.panelBottom.TabIndex = 2;
+			// 
+			// pbEffect
+			// 
+			this.pbEffect.Enabled = false;
+			this.pbEffect.Location = new System.Drawing.Point(439, 11);
+			this.pbEffect.MarqueeAnimationSpeed = 10;
+			this.pbEffect.Maximum = 50;
+			this.pbEffect.Name = "pbEffect";
+			this.pbEffect.Size = new System.Drawing.Size(374, 52);
+			this.pbEffect.Step = 5;
+			this.pbEffect.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+			this.pbEffect.TabIndex = 4;
+			this.pbEffect.Visible = false;
+			// 
+			// btnCreateFolders
+			// 
+			this.btnCreateFolders.BackgroundImage = global::FolderCreator_v2.Properties.Resources.iconfinder_go_next_118773;
+			this.btnCreateFolders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnCreateFolders.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnCreateFolders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnCreateFolders.ForeColor = System.Drawing.Color.White;
+			this.btnCreateFolders.Location = new System.Drawing.Point(820, 11);
+			this.btnCreateFolders.Name = "btnCreateFolders";
+			this.btnCreateFolders.Size = new System.Drawing.Size(50, 50);
+			this.btnCreateFolders.TabIndex = 3;
+			this.btnCreateFolders.UseVisualStyleBackColor = true;
+			this.btnCreateFolders.Click += new System.EventHandler(this.btnCreateFolders_Click);
 			// 
 			// ckMoveFiles
 			// 
@@ -280,6 +310,8 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripMenuItem topMenuExit;
 		private System.Windows.Forms.ToolStripMenuItem topMenuAnotherFiles;
+		private System.Windows.Forms.Button btnCreateFolders;
+		private System.Windows.Forms.ProgressBar pbEffect;
 	}
 }
 

@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>my_projects_folder.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\my_projects_folder.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -114,7 +114,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="my_projects_folder.ico" />
+    <Content Include="Resources\my_projects_folder.ico" />
+    <None Include="Resources\iconfinder_go-next_118773.png" />
     <None Include="Resources\iconfinder_Save_1493294.png" />
     <None Include="Resources\iconfinder_list-add_118777.png" />
     <None Include="Resources\iconfinder_go-bottom_118767.png" />

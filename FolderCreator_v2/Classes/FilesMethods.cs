@@ -58,5 +58,22 @@ namespace FolderCreator_v2.Classes
 		{
 			return Directory.GetFiles(path);
 		}
+
+		public string GetFileNameWithoutExtension(string path)
+		{
+			return Path.GetFileNameWithoutExtension(path);
+		}
+
+		public string GetFileWithExtension(string file) {
+			return Path.GetFileName(file);
+		}
+
+		public void MoveFileToFolder(string file, string path) {
+			File.Move(file, path);
+		}
+
+		public void CopyFile(string originalFilePath, string copyFilePath) {
+			File.Copy(originalFilePath, copyFilePath);
+		}
 	}
 }

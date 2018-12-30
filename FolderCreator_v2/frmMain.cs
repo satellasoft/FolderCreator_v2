@@ -63,6 +63,7 @@ namespace FolderCreator_v2
 			string path = txtFolderPath.Text;
 			if (path.Trim().Length > 0 && fileMethods.DirectoryExists(path))
 			{
+				clbFiles.Items.Clear();
 				ListFilesDirectory(path);
 			}
 			else
@@ -77,10 +78,6 @@ namespace FolderCreator_v2
 
 			if (listFiles != null && listFiles.Count > 0)
 			{
-				txtFolderPath.Enabled = false;
-				btnList.Enabled = false;
-				clbFiles.Items.Clear();
-
 				foreach (string s in listFiles)
 				{
 					clbFiles.Items.Add(s.Replace(path, "..."));
@@ -99,7 +96,10 @@ namespace FolderCreator_v2
 
 		private void topMenuExit_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			if (MessageBox.Show(texts[14], texts[7], MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+			{
+				this.Close();
+			}
 		}
 
 		private void btnCheckAll_Click(object sender, EventArgs e)
@@ -128,6 +128,110 @@ namespace FolderCreator_v2
 		private void topMenuAnotherFiles_Click(object sender, EventArgs e)
 		{
 			new frmAnotherFiles().ShowDialog();
+		}
+
+		private void btnCreateFolders_Click(object sender, EventArgs e)
+		{
+			if (clbFiles.CheckedItems.Count <= 0)
+			{
+				MessageBox.Show(this.texts[15], "!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
+			}
+
+			DisableControls(false);
+			List<string> files = new List<string>();
+			List<string> folders = new List<string>();
+
+			foreach (string s in clbFiles.CheckedItems.OfType<string>().ToList())
+			{
+				files.Add(s.Replace("...", txtFolderPath.Text));
+			}
+
+			folders = CreateFolders(files);
+			MoveFileToFolder(files);
+			CopyAnotherFiles(folders);
+
+			DisableControls(true);
+			ResetControls();
+
+			MessageBox.Show(this.texts[16], "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+		}
+
+		private List<string> CreateFolders(List<string> files)
+		{
+			List<string> temp = new List<string>();
+
+			foreach (string s in files)
+			{
+				temp.Add(fileMethods.GetFileNameWithoutExtension(s));
+				string path = (string.Format("{0}/{1}", txtFolderPath.Text, fileMethods.GetFileNameWithoutExtension(s)));
+				fileMethods.CreateFolder(path);
+				//string newFilePath = string.Format("{0}/{1}", path, fileMethods.GetFileWithExtension(s));
+				//fileMethods.MoveFileToFolder(s, newFilePath);
+			}
+
+			return temp;
+		}
+
+		private void MoveFileToFolder(List<string> files)
+		{
+			if (!ckMoveFiles.Checked)
+				return;
+
+			for (int i = 0; i < files.Count; i++)
+			{
+				string newFilePath = string.Format("{0}/{1}", txtFolderPath.Text, fileMethods.GetFileNameWithoutExtension(files[i]));
+				fileMethods.MoveFileToFolder(files[i], string.Format("{0}/{1}", newFilePath, fileMethods.GetFileWithExtension(files[i])));
+			}
+		}
+
+		private void CopyAnotherFiles(List<string> folder)
+		{
+			string[] anotherFiles = this.config.GetAnotherFiles();
+
+			if (anotherFiles == null || anotherFiles.Length == 0)
+			{
+				return;
+			}
+
+			foreach (string s in folder)
+			{
+				for (int i = 0; i < anotherFiles.Length; i++)
+				{
+					if (anotherFiles[i] != "" && anotherFiles[i] != "|")
+					{
+						//fileMethods.CopyFile(anotherFiles[i], string.Format("{0}/{1}", string.Format("{0}/{1}", txtFolderPath.Text, s), fileMethods.GetFileWithExtension(anotherFiles[i])));
+						string newPath = string.Format("{0}/{1}", txtFolderPath.Text, s);
+						string fileName = fileMethods.GetFileWithExtension(anotherFiles[i]);
+						string fullPath = string.Format("{0}/{1}", newPath, fileName);
+
+						fileMethods.CopyFile(anotherFiles[i], fullPath);
+					}
+				}
+			}
+
+		}
+
+		private void DisableControls(bool disable)
+		{
+			txtFolderPath.Enabled = disable;
+			btnCheckAll.Enabled = disable;
+			btnUncheckAll.Enabled = disable;
+			btnList.Enabled = disable;
+			btnFindFolder.Enabled = disable;
+			clbFiles.Enabled = disable;
+			ckMoveFiles.Enabled = disable;
+			topMenuFile.Enabled = disable;
+			btnCreateFolders.Enabled = disable;
+
+			pbEffect.Visible = !disable;
+		}
+
+		private void ResetControls()
+		{
+			clbFiles.Items.Clear();
+			txtFolderPath.Text = string.Empty;
 		}
 	}
 }

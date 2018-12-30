@@ -83,6 +83,16 @@ namespace FolderCreator_v2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_go_next_118773 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_go-next_118773", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_list_add_118777 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_list-add_118777", resourceCulture);

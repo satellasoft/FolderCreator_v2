@@ -7,4 +7,6 @@ C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Release\Folder
 C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Release\FolderCreator_v2.csproj.CoreCompileInputs.cache
 C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Release\FolderCreator_v2.exe
 C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Release\FolderCreator_v2.pdb
-C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Release\FolderCreator_v2.csprojResolveAssemblyReference.cache
+C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Release\FolderCreator_v2.Forms.frmAbout.resources
+C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Release\FolderCreator_v2.Forms.frmAnotherFiles.resources
+C:\Users\gunna\source\repos\FolderCreator_v2\FolderCreator_v2\obj\Release\FolderCreator_v2.Forms.frmExtensionFiles.resources

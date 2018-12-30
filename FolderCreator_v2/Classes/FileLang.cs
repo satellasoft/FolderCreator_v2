@@ -28,7 +28,10 @@ namespace FolderCreator_v2.Classes
 				"Invalid extension",
 				"No files found based on extensions",
 				"Another Files",
-				"The selected file is already in the list",//13
+				"The selected file is already in the list",
+				"Do you want to quit?",
+				"No files are selected in the list",
+				"All files have been moved", //16
 			};
 		}
 
