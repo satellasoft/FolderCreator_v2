@@ -64,16 +64,33 @@ namespace FolderCreator_v2.Classes
 			return Path.GetFileNameWithoutExtension(path);
 		}
 
-		public string GetFileWithExtension(string file) {
+		public string GetFileWithExtension(string file)
+		{
 			return Path.GetFileName(file);
 		}
 
-		public void MoveFileToFolder(string file, string path) {
+		public void MoveFileToFolder(string file, string path)
+		{
 			File.Move(file, path);
 		}
 
-		public void CopyFile(string originalFilePath, string copyFilePath) {
+		public void CopyFile(string originalFilePath, string copyFilePath)
+		{
 			File.Copy(originalFilePath, copyFilePath);
+		}
+
+		public void WriteText(string path, List<string> lines)
+		{
+			using (StreamWriter sw = new StreamWriter(path))
+			{
+				int i = 1;
+				foreach (string s in lines)
+				{
+					string currnetLine = ((i < 10) ? "0" + i : i.ToString());
+					sw.WriteLine(string.Format("{0} - {1}", currnetLine, s));
+					i++;
+				}
+			}
 		}
 	}
 }

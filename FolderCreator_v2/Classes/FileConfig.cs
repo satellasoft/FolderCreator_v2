@@ -14,12 +14,14 @@ namespace FolderCreator_v2.Classes
 		private FileExtension fileExtension = new FileExtension();
 		private FileAnotherFiles fileAnotherFiles = new FileAnotherFiles();
 		private FilesMethods fileMethods = new FilesMethods();
+		private string logFileName;
 		#endregion
 
 		public FileConfig()
 		{
 			this.configPath = "config/";
 			this.CreateDefautConfigs();
+			this.logFileName = "Log.txt";
 		}
 
 		#region "Create Configs"
@@ -134,6 +136,15 @@ namespace FolderCreator_v2.Classes
 			{
 				return null;
 			}
+		}
+
+		public void CreateLogFile(string path, List<string> lines)
+		{
+			path += "/" + logFileName;
+
+			string json = Newtonsoft.Json.JsonConvert.SerializeObject(lines);
+			lines.Add(json);
+			this.fileMethods.WriteText( path, lines);
 		}
 	}
 }

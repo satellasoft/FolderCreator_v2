@@ -151,6 +151,7 @@ namespace FolderCreator_v2
 			MoveFileToFolder(files);
 			CopyAnotherFiles(folders);
 
+			CreateLogFile(folders);
 			DisableControls(true);
 			ResetControls();
 
@@ -164,7 +165,8 @@ namespace FolderCreator_v2
 
 			foreach (string s in files)
 			{
-				temp.Add(fileMethods.GetFileNameWithoutExtension(s));
+				string fileName = fileMethods.GetFileNameWithoutExtension(s);
+				temp.Add(fileName);
 				string path = (string.Format("{0}/{1}", txtFolderPath.Text, fileMethods.GetFileNameWithoutExtension(s)));
 				fileMethods.CreateFolder(path);
 				//string newFilePath = string.Format("{0}/{1}", path, fileMethods.GetFileWithExtension(s));
@@ -226,6 +228,10 @@ namespace FolderCreator_v2
 			btnCreateFolders.Enabled = disable;
 
 			pbEffect.Visible = !disable;
+		}
+
+		private void CreateLogFile(List<string> files) {
+			this.config.CreateLogFile(txtFolderPath.Text, files);
 		}
 
 		private void ResetControls()
